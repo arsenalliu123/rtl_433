@@ -1629,7 +1629,6 @@ int main(int argc, char **argv) {
                 // apply file info or default
                 cfg->samp_rate        = demod->load_info.sample_rate ? demod->load_info.sample_rate : sample_rate_0;
                 cfg->center_frequency = demod->load_info.center_frequency ? demod->load_info.center_frequency : cfg->frequency[0];
-                parse_file_info(cfg->in_filename, &demod->load_info);
                 if (strcmp(demod->load_info.path, "-") == 0) { /* read samples from stdin */
                     in_file = stdin;
                     cfg->in_filename = "<stdin>";
